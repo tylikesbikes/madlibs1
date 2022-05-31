@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id ="pick_story">
+<form name="story" action = '/fill_story' method = 'GET'>
+    <select name = 'story_title'>
+        {% for t in storyList %}
+            <option name="{{t.title}}" value = "{{t.title}}">{{t.title}}</option>
+        {% endfor %}
+    </select>
+    <button>Go!</button>
+    
+</form>
+</section>
+{% endblock %}
